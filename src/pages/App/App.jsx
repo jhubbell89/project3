@@ -7,13 +7,14 @@ import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
     <main className="App">
       { user ?
         <>
+          
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* Route components in here */}
@@ -27,5 +28,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
