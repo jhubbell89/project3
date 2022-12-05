@@ -5,8 +5,9 @@
 
 ### Wireframe
 ![wireframe1](./aplanningpics/wireframe1.png)
-![wireframe2](wireframe2.png)
-![wireframe3](wireframe3.png)
+![wireframe2](./aplanningpics/wireframe2.png)
+![wireframe3](./aplanningpics/wireframe3.png)
+![wireframe4](./aplanningpics/wireframe4.png)
 
 ### Screenshots
 ![pic1](pic1.png)
