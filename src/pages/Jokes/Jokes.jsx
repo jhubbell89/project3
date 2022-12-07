@@ -1,9 +1,9 @@
-import './Jokes.css'
+// import './Jokes.css'
 
-import {useState} from 'react'
+// import {useState} from 'react'
 
-export default function JokeApp() {
-    const [result, setResult] = useState('Your joke/meme will be shown here...')
+// export default function JokeApp() {
+//     const [result, setResult] = useState('Your joke/meme will be shown here...')
 
 //   function generateJoke(){
 //     const options = {
@@ -33,22 +33,22 @@ export default function JokeApp() {
 //       .then(response => response.json())
 //       .then(response => setResult(<Image src={response.url} width="100%" height="100%" layout="responsive"></Image>))
 //       .catch(err => console.error(err));
-//   }
-    return (
-      <div class='container'>
-        <main class='main'>
-          <p class='description'>
-            Find the funniest jokes and memes
-          </p>
-          <div class='actionBtn'>
-            <button> Generate Joke </button>
-            <button> Generate Meme </button>
-          </div>
-          <div class='grid'>
-              <span class='card'>
-              </span>
-          </div>
-        </main>
-      </div>
-    )
-}
+// //   }
+//     return (
+//       <div class='container'>
+//         <main class='main'>
+//           <p class='description'>
+//             Find the funniest jokes and memes
+//           </p>
+//           <div class='actionBtn'>
+//             <button> Generate Joke </button>
+//             <button> Generate Meme </button>
+//           </div>
+//           <div class='grid'>
+//               <span class='card'>
+//               </span>
+//           </div>
+//         </main>
+//       </div>
+//     )
+// }
