@@ -16,7 +16,7 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path='/' element={<JokeApp />} />
+            {/* <Route path='/' element={<JokeApp />} /> */}
             <Route path="/jokes/new" element={<NewJokePage />} />
           </Routes>
         

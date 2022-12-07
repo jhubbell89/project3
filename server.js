@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const favicon = require('serve-favicon');
 const logger = require('morgan');
 
 require('dotenv').config();
@@ -13,6 +14,7 @@ app.use(logger('dev'));
 // Content-Type: 'application/json'
 // and put that data on req.body
 app.use(express.json());
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // middleware that adds the user object from a JWT to req.user
@@ -20,6 +22,9 @@ app.use(require('./config/checkToken'));
 
 // Put all API routes here (before the catch-all)
 app.use('/api/users', require('./routes/api/users'));
+
+// Protect all routes in the jokes router
+
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
