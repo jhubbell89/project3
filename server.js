@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 
 require('dotenv').config();
@@ -14,7 +13,6 @@ app.use(logger('dev'));
 // Content-Type: 'application/json'
 // and put that data on req.body
 app.use(express.json());
-// app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // middleware that adds the user object from a JWT to req.user
