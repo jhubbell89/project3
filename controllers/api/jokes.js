@@ -16,10 +16,10 @@ async function index(req, res) {
 }
 
 async function newJoke(req, res) {
-    res.json(jokes)
+    res.json()
 }
 
-async function create(req, req) {
+async function create(req, res) {
     const joke = new Joke(req.body)
     joke.save(function() {
         res.json(joke)

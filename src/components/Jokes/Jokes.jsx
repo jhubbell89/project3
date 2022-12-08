@@ -4,7 +4,7 @@ export default function JokesList() {
     
     return(
         <>
-        <p>test</p>
+        <p>will show jokes here eventually</p>
         </>
     )
 }

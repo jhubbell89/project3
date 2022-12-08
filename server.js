@@ -24,7 +24,7 @@ app.use(require('./config/checkToken'));
 app.use('/api/users', require('./routes/api/users'));
 
 // Protect all routes in the jokes router
-
+app.use('/api/jokes', require('./routes/api/jokes'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above

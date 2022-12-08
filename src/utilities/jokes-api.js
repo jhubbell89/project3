@@ -9,8 +9,8 @@ export function newJoke() {
     return sendRequest(`${BASE_URL}/new`, 'GET')
 }
 
-export function createJoke() {
-    return sendRequest(`${BASE_URL}`, 'POST')
+export function createJoke(newJokeData) {
+    return sendRequest(`${BASE_URL}`, 'POST', newJokeData);
 }
 
 export function deleteJoke(id) {
