@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
-import NewJokePage from '../NewJokePage/NewJokePage';
+import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
-import JokeApp from '../Jokes/Jokes';
+import JokeApp from '../../components/Jokes/Jokes';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -17,7 +17,7 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* <Route path='/' element={<JokeApp />} /> */}
-            <Route path="/jokes/new" element={<NewJokePage />} />
+            <Route path="/" element={<NewJokeForm />} />
           </Routes>
         
         </>

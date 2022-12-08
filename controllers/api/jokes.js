@@ -11,7 +11,8 @@ module.exports = {
 }
 
 async function index(req, res) {
-    
+    const jokes = await Joke.find()
+    res.json(jokes)
 }
 
 async function newJoke(req, res) {
