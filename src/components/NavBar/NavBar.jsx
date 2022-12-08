@@ -15,7 +15,7 @@ export default function NavBar({ user, setUser }) {
       <nav>
         <Link to='/'>Jokes</Link>
         &nbsp; | &nbsp;
-        <Link to='/Newjoke'>Add Joke</Link>
+        <Link to='/newjoke'>Add Joke</Link>
         &nbsp; | &nbsp;
         <span>Welcome, {user.name}</span>
         &nbsp; | &nbsp;
