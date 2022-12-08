@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <div>
       <nav>
-        <Link to='/'>Main</Link>
+        <Link to='/'>Jokes</Link>
         &nbsp; | &nbsp;
         <Link to='/Newjoke'>Add Joke</Link>
         &nbsp; | &nbsp;

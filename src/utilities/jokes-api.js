@@ -13,14 +13,14 @@ export function createJoke() {
     return sendRequest(`${BASE_URL}`, 'POST')
 }
 
-export function deleteJoke() {
-    return sendRequest(`${BASE_URL}`, 'DELETE')
+export function deleteJoke(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
 
-export function editJoke() {
-    return sendRequest(`${BASE_URL}`, 'GET')
+export function editJoke(id) {
+    return sendRequest(`${BASE_URL}/${id}/edit`, 'GET')
 }
 
-export function updateJoke() {
-    return sendRequest(`${BASE_URL}`, 'PUT')
+export function updateJoke(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT')
 }

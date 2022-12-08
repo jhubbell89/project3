@@ -1,6 +1,5 @@
 import { Component } from 'react';
-import {  } from '../../utilities/jokes-api'
-import { signUp } from '../../utilities/users-service';
+import { createJoke } from '../../utilities/jokes-api'
 
 export default class NewJokeForm extends Component {
   state = {
@@ -11,9 +10,9 @@ export default class NewJokeForm extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault();
     const formData = {...this.state};
-    const joke = await signUp(formData);
+    const joke = await createJoke(formData);
+    this.props.setJoke(joke)
     console.log('test')
-
     
   }
 

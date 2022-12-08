@@ -7,7 +7,6 @@ var jokeSchema = new Schema({
     user: {type: Schema.Types.ObjectId, ref: 'User'},
 },{
     timestamp: true,
-}
-)
+})
 
 module.exports = mongoose.model('Joke', jokeSchema)
