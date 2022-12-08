@@ -4,7 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
 import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
-import JokesList from '../../components/Jokes/Jokes';
+import JokesList from '../../components/JokesList/JokesList';
 import './App.css';
 
 export default function App() {
