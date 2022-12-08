@@ -5,7 +5,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
 import './App.css';
-import JokeApp from '../../components/Jokes/Jokes';
+import JokesList from '../../components/Jokes/Jokes';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -16,8 +16,8 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            {/* <Route path='/' element={<JokeApp />} /> */}
-            <Route path="/" element={<NewJokeForm />} />
+            <Route path="/newjoke" element={<NewJokeForm />} />
+            <Route path='/' element={<JokesList />} />
           </Routes>
         
         </>

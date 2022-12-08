@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import {  } from '../../utilities/jokes-api'
+import { signUp } from '../../utilities/users-service';
 
 export default class NewJokeForm extends Component {
   state = {
@@ -8,6 +10,10 @@ export default class NewJokeForm extends Component {
 
   handleSubmit = async (evt) => {
     evt.preventDefault();
+    const formData = {...this.state};
+    const joke = await signUp(formData);
+    console.log('test')
+
     
   }
 
@@ -26,7 +32,7 @@ export default class NewJokeForm extends Component {
           <input type='text' name='joke' value={this.state.joke} onChange={this.handleChange} required />
           <br />
           <label>Appropriate?</label>
-          <input type='text' name='nsfw' value={this.state.nsfw} onchange={this.handleChange} required />
+          <input type='text' name='nsfw' value={this.state.nsfw} onChange={this.handleChange} required />
           <button type='submit'>Submit</button>
         </form>
       </div>

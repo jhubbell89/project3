@@ -11,9 +11,11 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <div class=''>
+    <div>
       <nav>
         <Link to='/'>Main</Link>
+        &nbsp; | &nbsp;
+        <Link to='/Newjoke'>Add Joke</Link>
         &nbsp; | &nbsp;
         <span>Welcome, {user.name}</span>
         &nbsp; | &nbsp;
