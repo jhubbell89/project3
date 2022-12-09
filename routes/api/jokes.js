@@ -3,7 +3,7 @@ const router = express.Router()
 const jokesCtrl = require('../../controllers/api/jokes')
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
-router.get('/', ensureLoggedIn, jokesCtrl.index)
+router.get('/', jokesCtrl.index)
 router.get('/new', ensureLoggedIn, jokesCtrl.new )
 router.post('/', ensureLoggedIn, jokesCtrl.create)
 router.delete('/:id', ensureLoggedIn, jokesCtrl.delete)

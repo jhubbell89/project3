@@ -6,9 +6,12 @@ import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
 import JokesList from '../../components/JokesList/JokesList';
 import './App.css';
+import { useEffect } from 'react';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  
+
 
   return (
     <main className="App">

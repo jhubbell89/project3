@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { createJoke } from '../../utilities/jokes-api'
+import { useState, useEffect } from 'react';
+
 
 export default class NewJokeForm extends Component {
   state = {
@@ -8,11 +10,10 @@ export default class NewJokeForm extends Component {
   }
 
   handleSubmit = async (evt) => {
-    evt.preventDefault();
+    // evt.preventDefault();
     const formData = {...this.state};
-    await createJoke(formData);
-    // this.props.setJoke(joke);
-    
+    await createJoke(formData)
+  
   }
 
   handleChange = (evt) => {

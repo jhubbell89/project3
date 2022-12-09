@@ -4,13 +4,18 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 var cors = require('cors')
 
-app.use(cors())
+// app.use(cors())
 
 require('dotenv').config();
 // Connect to db after the dotenv above
 require('./config/database');
 
 const app = express();
+
+var corsOptions = {
+  origin: 'http://example.com',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 app.use(logger('dev'));
 // Process data in body of request if 
