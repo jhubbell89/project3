@@ -7,7 +7,7 @@ router.get('/', jokesCtrl.index)
 router.get('/new', ensureLoggedIn, jokesCtrl.new )
 router.post('/', ensureLoggedIn, jokesCtrl.create)
 router.delete('/:id', jokesCtrl.delete)
-router.get('/:id/edit', ensureLoggedIn, jokesCtrl.edit)
-router.put('/:id', ensureLoggedIn, jokesCtrl.update)
+router.get('/:id/edit', jokesCtrl.edit)
+router.put('/:id', jokesCtrl.update)
 
 module.exports = router;

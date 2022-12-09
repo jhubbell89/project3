@@ -10,6 +10,7 @@ export default function JokeItem({item}) {
         console.log(item._id);
         evt.preventDefault()
         await fetch(`/api/jokes/${item._id}/edit`, {method:'GET'})
+        console.log()
     }
 
 

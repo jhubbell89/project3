@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { createJoke } from '../../utilities/jokes-api'
+import './NewJoke.css'
 
 export default class NewJokeForm extends Component {
   state = {
@@ -32,7 +33,7 @@ export default class NewJokeForm extends Component {
           <label>Appropriate?</label>
           <input type='text' name='nsfw' value={this.state.nsfw} onChange={this.handleChange} required />
           <br></br>
-          <button type='submit'>Submit</button>
+          <button className='newjokesubmitbtn' type='submit'>Submit</button>
           </form>
           </div>
       </div>
