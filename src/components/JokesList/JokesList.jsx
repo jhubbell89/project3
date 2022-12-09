@@ -10,9 +10,9 @@ export default function JokesList({jokeItems, handleEdit, handleDelete}) {
     //     //     handleDelete={handleDelete}
     //     //  />
     //     );
-    return (
-        // <main className='Menulist'>
-        //     {items}
-        // </main>
-    )
+    // return (
+    //     <main className='Menulist'>
+    //         {items}
+    //     </main>
+    // )
 }
