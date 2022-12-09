@@ -38,7 +38,6 @@ async function edit(req, res) {
     console.log('edit controller start')
     Joke.findOne({_id: req.params.id}, function(err, joke) {
         res.json(joke)
-
     })
 }
 

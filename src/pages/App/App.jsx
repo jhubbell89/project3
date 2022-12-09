@@ -19,8 +19,9 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/newjoke" element={<NewJokeForm />} />
+            <Route path='/newjoke' element={<NewJokeForm />} />
             <Route path='/' element={<JokesList />} />
+            {/* <Route path='' */}
           </Routes>
         </>
         :

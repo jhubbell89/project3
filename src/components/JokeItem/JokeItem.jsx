@@ -10,13 +10,20 @@ export default function JokeItem({item}) {
         console.log(item._id);
         evt.preventDefault()
         await fetch(`/api/jokes/${item._id}/edit`, {method:'GET'})
-        console.log()
-    }
+        .then(response => {
+            if (response.ok) {
+                // redirect to the edit page for the joke
+                window.location.href = `/jokes/${item._id}/edit`
+            } else {
+                console.error('GET request failed')
+            }
+        })
+        .catch(err => console.error(err))
+}
+
 
 
     async function handleDelete(evt) {
-        // evt.preventDefault()
-        console.log(item._id)
         await fetch(`/api/jokes/${item._id}`, {method:"DELETE"})
         window.location.reload()  
    }

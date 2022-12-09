@@ -14,12 +14,13 @@ export function createJoke(newJokeData) {
 }
 
 export function deleteJoke(id) {
-    console.log('delete api')
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
 
 export function editJoke(id) {
-    return sendRequest(`${BASE_URL}/${id}/edit`, 'GET')
+    console.log('editjoke api start')
+    return( sendRequest(`${BASE_URL}/${id}/edit`, 'GET'),
+    console.log('editjoke api end'))
 }
 
 export function updateJoke(id) {
