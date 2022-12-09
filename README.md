@@ -11,10 +11,10 @@ I built this app co i can input jokes into it and maintain the collection by edi
 ![wireframe4](./aplanningpics/wireframe4.png)
 
 ### Screenshots
-![pic1](pic1.png)
-![pic2](pic2.png)
-![pic3](pic3.png)
-![pic4](pic4.png)
+![pic1](./aplanningpics/pic1.png)
+![pic2](./aplanningpics/pic2.png)
+![pic3](./aplanningpics/pic3.png)
+![pic4](./aplanningpics/pic4.png)
 
 ### Technologies Used
 HTML, CSS, Java Script, JWT, MongoDB, React, Node.js. 
