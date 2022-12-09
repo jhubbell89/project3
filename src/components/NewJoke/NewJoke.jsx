@@ -24,14 +24,17 @@ export default class NewJokeForm extends Component {
   render() {
     return (
       <div>
-        <form autoComplete='off' onSubmit={this.handleSubmit} >
+          <div className='line'>
+          <form autoComplete='off' onSubmit={this.handleSubmit} >
           <label>Joke</label>
           <input type='text' name='joke' value={this.state.joke} onChange={this.handleChange} required />
           <br />
           <label>Appropriate?</label>
           <input type='text' name='nsfw' value={this.state.nsfw} onChange={this.handleChange} required />
+          <br></br>
           <button type='submit'>Submit</button>
-        </form>
+          </form>
+          </div>
       </div>
     )
   }  

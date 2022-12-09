@@ -1,0 +1,16 @@
+input[type=email] {
+    max-width: 300px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.sign-up-btn {
+    background-color: #047eaa;
+    color: red;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
