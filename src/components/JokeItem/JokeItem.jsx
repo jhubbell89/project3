@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './JokeItem.css'
 
 
@@ -22,7 +23,7 @@ export default function JokeItem({item}) {
             <div>{item.joke}</div>
             <div>Safe for work: {item.nsfw}</div>
             </div>
-            <button onClick={handleEdit}>Edit</button>
+            <Link className='editbtn' to={`/${item._id}/edit`}>Edit</Link>
             <button onClick={handleDelete}>Delete</button>
         </div>
     )

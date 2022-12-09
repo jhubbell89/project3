@@ -24,5 +24,6 @@ export function editJoke(id) {
 }
 
 export function updateJoke(id) {
-    return sendRequest(`${BASE_URL}/${id}`, 'PUT')
+    console.log('updatejoke api start')
+    return sendRequest(`${BASE_URL}/${id}/edit`, 'PUT')
 }

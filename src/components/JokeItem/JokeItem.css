@@ -8,3 +8,8 @@
     background-color: fuchsia;
 }
 
+.editbtn {
+    border: 1px solid black;
+    background-color: beige;
+    padding: 1px;
+}

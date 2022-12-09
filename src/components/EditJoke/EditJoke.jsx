@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import { Component } from 'react';
+import { updateJoke } from '../../utilities/jokes-api'
 
 export default class EditJokeForm extends Component {
     state = {
@@ -7,9 +9,10 @@ export default class EditJokeForm extends Component {
     }
   
     handleSubmit = async (evt) => {
-      // evt.preventDefault();
+      evt.preventDefault();
       const formData = {...this.state};
-      await createJoke(formData)
+      console.log(formData)
+      await updateJoke(formData)
     
     }
   

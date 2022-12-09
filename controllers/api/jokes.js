@@ -43,12 +43,16 @@ async function edit(req, res) {
 
 async function update(req, res) {
     console.log('update controller start')
-    Joke.findOneAndUpdate(
-        {_id: req.params.id},
-        req.body,
-        {new: true},
-        function(joke) {
-            res.json(joke)
-        }
-    )
+    console.log(req.params)
+    Joke.findById(req.params.id)
+    .then(joke => {joke.joke=req.body.joke})
+//     Joke.findOneAndUpdate(
+//         {_id: req.params.id},
+//         req.body,
+//         {new: true},
+//         function(joke) {
+//             res.json(joke)
+//         }
+//     )
 }
+

@@ -6,12 +6,10 @@ import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
 import JokesList from '../../components/JokesList/JokesList';
 import './App.css';
-
+import EditJokeForm from '../../components/EditJoke/EditJoke';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  
-
 
   return (
     <main className="App">
@@ -21,7 +19,7 @@ export default function App() {
           <Routes>
             <Route path='/newjoke' element={<NewJokeForm />} />
             <Route path='/' element={<JokesList />} />
-            {/* <Route path='' */}
+            <Route path='/:id/edit' element={<EditJokeForm />} />
           </Routes>
         </>
         :
