@@ -1,7 +1,5 @@
 import { Component } from 'react';
 import { createJoke } from '../../utilities/jokes-api'
-import { useState, useEffect } from 'react';
-
 
 export default class NewJokeForm extends Component {
   state = {

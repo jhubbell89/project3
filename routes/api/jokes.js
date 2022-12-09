@@ -6,7 +6,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 router.get('/', jokesCtrl.index)
 router.get('/new', ensureLoggedIn, jokesCtrl.new )
 router.post('/', ensureLoggedIn, jokesCtrl.create)
-router.delete('/:id', ensureLoggedIn, jokesCtrl.delete)
+router.delete('/:id', jokesCtrl.delete)
 router.get('/:id/edit', ensureLoggedIn, jokesCtrl.edit)
 router.put('/:id', ensureLoggedIn, jokesCtrl.update)
 

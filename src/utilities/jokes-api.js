@@ -14,6 +14,7 @@ export function createJoke(newJokeData) {
 }
 
 export function deleteJoke(id) {
+    console.log('delete api')
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
 

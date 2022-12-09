@@ -11,7 +11,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <div>
+    <div className='navbar'>
       <nav>
         <Link to='/'>Jokes</Link>
         &nbsp; | &nbsp;

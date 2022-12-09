@@ -6,7 +6,7 @@ import NewJokeForm from '../../components/NewJoke/NewJoke';
 import NavBar from '../../components/NavBar/NavBar';
 import JokesList from '../../components/JokesList/JokesList';
 import './App.css';
-import { useEffect } from 'react';
+
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -22,7 +22,6 @@ export default function App() {
             <Route path="/newjoke" element={<NewJokeForm />} />
             <Route path='/' element={<JokesList />} />
           </Routes>
-        
         </>
         :
         <AuthPage setUser={setUser} />

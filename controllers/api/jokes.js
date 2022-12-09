@@ -28,21 +28,24 @@ async function create(req, res) {
 
 async function deleteJoke(req, res) {
     Joke.findOneAndDelete(
-        {_id: reportError.params.id, userRecommending: req.user._id}, function(err) {
+        {_id: req.params.id}, function(err) {
             res.json(Joke)
         }
     )
 }
 
 async function edit(req, res) {
-    Joke.findOne({_id: req.params.id, userRecommending: req.user._id}, function(err, joke) {
-        req.json(joke)
+    console.log('edit controller start')
+    Joke.findOne({_id: req.params.id}, function(err, joke) {
+        res.json(joke)
+
     })
 }
 
 async function update(req, res) {
+    console.log('update controller start')
     Joke.findOneAndUpdate(
-        {_id: req.params.id, userRecommending: req.user._id},
+        {_id: req.params.id},
         req.body,
         {new: true},
         function(joke) {
