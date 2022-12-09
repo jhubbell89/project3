@@ -1,6 +1,7 @@
 .line {
 border: 1px solid black;
 background-color: orangered;
+max-width: 500px;
 
 }
 

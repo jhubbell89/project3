@@ -41,11 +41,11 @@ async function edit(req, res) {
     })
 }
 
-async function update(req, res) {
-    console.log('update controller start')
-    console.log(req.params)
-    Joke.findById(req.params.id)
-    .then(joke => {joke.joke=req.body.joke})
+// async function update(req, res) {
+//     console.log('update controller start')
+//     console.log(req.params)
+//     Joke.findById(req.params.id)
+//     .then(joke => {joke.joke=req.body.joke})
 //     Joke.findOneAndUpdate(
 //         {_id: req.params.id},
 //         req.body,
@@ -54,5 +54,14 @@ async function update(req, res) {
 //             res.json(joke)
 //         }
 //     )
-}
+// }
 
+function update(req, res, next) {    
+    Joke.findById(req.params.id)         
+    .then(joke => {             
+        joke.joke = req.body.joke             
+        joke.workapropriate = req.body.joke             
+        joke.save()                 
+        .then(() => res.json("joke updated!"))                 
+        .catch(err => res.status(400).json("Error: " + err))         })
+        .catch(err => res.status(400).json("Error: " + err)) }
