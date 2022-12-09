@@ -7,21 +7,9 @@ export default function JokeItem({item}) {
     
     async function handleEdit(evt) {
         console.log('clicked');
-        console.log(item._id);
         evt.preventDefault()
         await fetch(`/api/jokes/${item._id}/edit`, {method:'GET'})
-        .then(response => {
-            if (response.ok) {
-                // redirect to the edit page for the joke
-                window.location.href = `/jokes/${item._id}/edit`
-            } else {
-                console.error('GET request failed')
-            }
-        })
-        .catch(err => console.error(err))
 }
-
-
 
     async function handleDelete(evt) {
         await fetch(`/api/jokes/${item._id}`, {method:"DELETE"})
