@@ -28,11 +28,11 @@ app.use(express.static(path.join(__dirname, 'build')));
 // middleware that adds the user object from a JWT to req.user
 app.use(require('./config/checkToken'));
 
-// Put all API routes here (before the catch-all)
-app.use('/api/users', require('./routes/api/users'));
-
 // Protect all routes in the jokes router
 app.use('/api/jokes', require('./routes/api/jokes'));
+
+// Put all API routes here (before the catch-all)
+app.use('/api/users', require('./routes/api/users'));
 
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above

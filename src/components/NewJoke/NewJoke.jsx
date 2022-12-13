@@ -6,10 +6,10 @@ export default class NewJokeForm extends Component {
   state = {
     joke: '',
     nsfw: '',
+    user: this.props.user._id,
   }
 
   handleSubmit = async (evt) => {
-    // evt.preventDefault();
     const formData = {...this.state};
     await createJoke(formData)
   

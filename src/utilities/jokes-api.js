@@ -23,7 +23,7 @@ export function editJoke(id) {
     console.log('editjoke api end'))
 }
 
-export function updateJoke(id) {
-    console.log('updatejoke api start')
-    return sendRequest(`${BASE_URL}/${id}/edit`, 'PUT')
+export function updateJoke(form, id) {
+    console.log(id)
+    return sendRequest(`${BASE_URL}/${id}`, 'PUT')
 }

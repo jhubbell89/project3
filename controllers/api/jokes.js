@@ -57,10 +57,12 @@ async function edit(req, res) {
 // }
 
 function update(req, res, next) {    
+
     Joke.findById(req.params.id)         
     .then(joke => {             
         joke.joke = req.body.joke             
-        joke.workapropriate = req.body.joke             
+        joke.nsfw = req.body.nsfw 
+        console.log('start controller update')    
         joke.save()                 
         .then(() => res.json("joke updated!"))                 
         .catch(err => res.status(400).json("Error: " + err))         })

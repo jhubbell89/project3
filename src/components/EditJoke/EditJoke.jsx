@@ -1,44 +1,40 @@
-import { Routes, Route } from 'react-router-dom';
-import { Component } from 'react';
-import { updateJoke } from '../../utilities/jokes-api'
+import { useState } from 'react'
+import { updateJoke } from '../../utilities/jokes-api';
+import sendRequest from '../../utilities/send-request'
 
-export default class EditJokeForm extends Component {
-    state = {
-      joke: '',
-      nsfw: '',
-    }
-  
-    handleSubmit = async (evt) => {
-      evt.preventDefault();
-      const formData = {...this.state};
-      console.log(formData)
-      await updateJoke(formData)
+export default function EditJokeForm({editForm, setEditForm, item, change, setChange, editing, setEditing}) {
     
+    const handleSubmit = async (evt) => {
+      evt.preventDefault();
+      setChange(!change)
+      setEditing(!editing)
+      await sendRequest(`/api/jokes/${item._id}`, 'PUT', editForm)
     }
   
-    handleChange = (evt) => {
-      this.setState({
+    const handleChange = (evt) => {
+      evt.preventDefault();
+      setEditForm({ 
+        ...editForm,
         [evt.target.name]: evt.target.value,
-        error: ''
       });
+
     }
-  
-    render() {
+ 
       return (
         <div>
             <div className='line'>
-            <form autoComplete='off' onSubmit={this.handleSubmit} >
+            <form autoComplete='off' onSubmit={handleSubmit} >
             <label>Joke</label>
-            <input type='text' name='joke' value={this.state.joke} onChange={this.handleChange} required />
+            <input type='text' name='joke' value={editForm.joke} onChange={handleChange} required />
             <br />
             <label>Appropriate?</label>
-            <input type='text' name='nsfw' value={this.state.nsfw} onChange={this.handleChange} required />
+            <input type='text' name='nsfw' value={editForm.nsfw} onChange={handleChange} required />
             <br></br>
-            <button className='newjokesubmitbtn' type='submit'>Submit</button>
+            <button className='newjokesubmitbtn' type='submit' >Submit</button>
             </form>
             </div>
         </div>
       )
-    }  
-  }
+}
+  
   

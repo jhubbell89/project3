@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 import './JokeItem.css'
-
-
+import { useState } from 'react'
 import { deleteJoke, editJoke } from '../../utilities/jokes-api'
+import EditJokeForm from '../EditJoke/EditJoke';
 
-export default function JokeItem({item}) {
-    
+export default function JokeItem({item, userId, change, setChange}) {
+    const [editForm, setEditForm] = useState({
+        joke: item.joke,
+        nsfw: item.nsfw,
+        user: userId
+      })
+    const [editing, setEditing] = useState(false)
     async function handleEdit(evt) {
         console.log('clicked');
-        evt.preventDefault()
-        await fetch(`/api/jokes/${item._id}/edit`, {method:'GET'})
+        setEditing(!editing)
 }
 
     async function handleDelete(evt) {
@@ -18,13 +22,16 @@ export default function JokeItem({item}) {
    }
 
     return (
+        <>
         <div className='jokecard'>
             <div className='joke'>
             <div>{item.joke}</div>
             <div>Safe for work: {item.nsfw}</div>
             </div>
-            <Link className='editbtn' to={`/${item._id}/edit`}>Edit</Link>
+            <button onClick={handleEdit}>Edit</button>
             <button onClick={handleDelete}>Delete</button>
         </div>
+        {editing? <EditJokeForm editForm={editForm} setEditForm={setEditForm} item={item} change={change} setChange={setChange} editing={editing} setEditing={setEditing} /> : ''}
+        </>
     )
 }
