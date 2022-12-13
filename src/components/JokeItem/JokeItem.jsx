@@ -12,7 +12,7 @@ export default function JokeItem({item, userId, change, setChange}) {
       })
     const [editing, setEditing] = useState(false)
     async function handleEdit(evt) {
-        console.log('clicked');
+
         setEditing(!editing)
 }
 

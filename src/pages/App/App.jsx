@@ -19,7 +19,6 @@ export default function App() {
             setJokeItems(Items)
         }
         getItems()
-        console.log('app.jsx')
     }, [change] )
   return (
     <main className="App">

@@ -10,7 +10,6 @@ export default function JokesList({user, jokeItems, setJokeItems, change, setCha
             setJokeItems(Items)
         }
         getItems()
-        console.log('app.jsx')
     }, [change] )
     
     const items = jokeItems.map(item =>
