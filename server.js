@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-var cors = require('cors')
+// var cors = require('cors')
 
 // app.use(cors())
 
@@ -12,10 +12,10 @@ require('./config/database');
 
 const app = express();
 
-var corsOptions = {
-  origin: 'http://example.com',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+// var corsOptions = {
+//   origin: 'http://example.com',
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
 
 app.use(logger('dev'));
 // Process data in body of request if 
@@ -40,8 +40,9 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const port = process.env.PORT || 3001;
+module.exports = app
+// const port = process.env.PORT || 3001;
 
-app.listen(port, function() {
-  console.log(`Express app running on port ${port}`);
-});
+// app.listen(port, function() {
+//   console.log(`Express app running on port ${port}`);
+// });
